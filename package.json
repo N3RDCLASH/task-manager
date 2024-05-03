@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/firebase-adapter": "^2.0.0",
     "@mantine/core": "^7.9.0",
     "@mantine/dates": "^7.9.0",
     "@mantine/dropzone": "^7.9.0",
@@ -20,7 +21,9 @@
     "@mantine/spotlight": "^7.9.0",
     "@tanstack/react-query": "^5.32.1",
     "dayjs": "^1.11.11",
+    "firebase-admin": "^11.11.1",
     "next": "14.2.3",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18"
   },

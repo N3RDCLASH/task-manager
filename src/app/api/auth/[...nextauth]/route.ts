@@ -1,10 +1,14 @@
-import NextAuth from "next-auth";
 import { FirestoreAdapter } from "@auth/firebase-adapter";
-import { Adapter } from "next-auth/adapters";
 import { cert } from "firebase-admin/app";
+import NextAuth from "next-auth";
+import { Adapter } from "next-auth/adapters";
 import GoogleProvider from "next-auth/providers/google";
 
 const handler = NextAuth({
+  pages: {
+    signIn: '/login',
+    signOut: '/logout',
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID ?? "",
@@ -21,3 +25,4 @@ const handler = NextAuth({
 });
 
 export { handler as GET, handler as POST };
+
